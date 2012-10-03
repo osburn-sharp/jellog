@@ -1,4 +1,4 @@
-# JELLY
+# JELLOG
 
 ### (a.k.a. Jumpin Ermin's Loquatious Logger)
 

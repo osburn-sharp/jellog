@@ -1,6 +1,10 @@
 == History
 
-[jellog-1.0.11 21-Sep-2012]
+[jellog-1.0.12 03-Oct-2012]
+
+  Slight tweak to README after name change!
+
+[jellog-1.0.11 03-Oct-2012]
 
   Renamed because jelly was already in use in Gem-space.
 
