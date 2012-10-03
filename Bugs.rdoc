@@ -1,0 +1,5 @@
+== Bugs and Change Requests for Jellog
+
+[jellog-1.0.10 21-Sep-2012]
+
+  No outstanding bugs

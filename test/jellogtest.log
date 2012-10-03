@@ -1,0 +1,6 @@
+[2012-10-02 14:30:47] INFO - Hello
+[2012-10-02 14:30:47] DEBUG - This should be green
+[2012-10-02 14:30:47] WARN - This should be yellow
+[2012-10-02 14:30:47] ERROR - This should be red
+[2012-10-02 14:30:47] FATAL - This should be red and bold
+[2012-10-02 14:30:47] SYSTEM - This should be blue

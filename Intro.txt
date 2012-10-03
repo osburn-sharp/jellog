@@ -1,0 +1,4 @@
+A wrapper class around the standard Ruby logger that adds a simply logging level control
+and the ability to log certain messages to syslog. It also adds a puts method so that the
+logger can be used instead of stdout etc. Output can be coloured depending on the logging
+level.

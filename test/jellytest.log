@@ -1,0 +1,6 @@
+[37m[2012-01-21 14:48:15] INFO[0m - Hello
+[32m[2012-01-21 14:48:15] DEBUG[0m - This should be green
+[33m[2012-01-21 14:48:15] WARN[0m - This should be yellow
+[31m[2012-01-21 14:48:15] ERROR[0m - This should be red
+[1m[31m[2012-01-21 14:48:15] FATAL[0m[0m - This should be red and bold
+[36m[2012-01-21 14:48:15] SYSTEM[0m - This should be blue

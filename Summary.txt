@@ -1,0 +1,1 @@
+Jellog is a simple Ruby logger with a few added extras
