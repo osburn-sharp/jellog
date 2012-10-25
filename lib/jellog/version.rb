@@ -1,7 +1,7 @@
 # Created by Jevoom
 #
 # 25-Oct-2012
-#   Change default log dir to '/var/log/jellog'.
+#   Change default log dir to '/var/log/jellog' and tweak the readme.
 
 module Jellog
   # version set to 1.0.13
