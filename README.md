@@ -1,6 +1,6 @@
 # JELLOG
 
-### (a.k.a. Jumpin Ermin's Loquatious Logger)
+_(a.k.a. Jumpin Ermin's Loquatious Logger)_
 
 Based on the standard ruby logger, Jellog provides a slightly simplified interface and
 adds a few features that may be useful:
@@ -13,6 +13,13 @@ adds a few features that may be useful:
   vs background);
 * returns logged messages, e.g. to cascade into exceptions
 * simple log level control.
+
+
+**GitHub:** [https://github.com/osburn-sharp/jellog](https://github.com/osburn-sharp/jellog)
+
+**RubyDoc:** [http://rubydoc.info/github/osburn-sharp/jellog/frames](http://rubydoc.info/github/osburn-sharp/jellog/frames)
+
+**RubyGems:** [https://rubygems.org/gems/jellog](https://rubygems.org/gems/jellog)
 
 ## Installation
 
