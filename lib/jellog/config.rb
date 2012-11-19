@@ -36,7 +36,7 @@ module Jellog
   class Config < Jeckyl::Config
     
     def configure_log_dir(dir)
-      default '/var/log/jellog'
+      default '/var/log/jerbil'
       comment "Path to a writeable directory where Jellog will save log files."
 
       a_writable_dir(dir)

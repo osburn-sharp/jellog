@@ -1,2 +1,2 @@
 #no_tags 'on'
-install_message "Jeillog is now installed. Type 'jellog' for help"
+install_message "Jellog is now installed. Type 'jellog' for help"

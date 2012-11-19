@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Jellog::Slogger
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Jellog.html" title="Jellog (module)">Jellog</a></span></span>
+     &raquo; 
+    <span class="title">Slogger</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Jellog::Slogger
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Jellog::Slogger</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/jellog/logger.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This inner logger is used by Jellog to encapsulate the ruby logger.</p>
+
+<p>NOTE it uses a tiny touch of meta-magic to inherit all of the logging
+methods from Jellog and then uses a very basic interface to the logger
+itself to protect it from other apps</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  <h2>Constant Summary</h2>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#close-instance_method" title="#close (instance method)">- (Object) <strong>close</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>close the log file.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#colours%3D-instance_method" title="#colours= (instance method)">- (Object) <strong>colours=</strong>(colour_hash) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>change the colour lookup.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Slogger) <strong>initialize</strong>(logfilename, reset, max_logs, max_size, coloured, format, sync) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>create a new logger with the given filename and following parameters.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#method_missing-instance_method" title="#method_missing (instance method)">- (Object) <strong>method_missing</strong>(meth, msg) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>handle logging methods as required.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Jellog::Slogger (class)">Slogger</a></span></tt>) <strong>initialize</strong>(logfilename, reset, max_logs, max_size, coloured, format, sync) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>create a new logger with the given filename and following parameters. Note
+that there are no defaults. It is expected that these values will be set by
+<span class='object_link'><a href="Config.html" title="Jellog::Config (class)">Config</a></span></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>logfilename</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>path to log file to create</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reset</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the log when opening, deleting any previous content</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>max_logs</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>number of log files to maintain</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>max-size</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>in megabytes being the max length of log file</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>coloured</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>colour logs or not</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>format</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>strftime format for time stamps</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>sync</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>flag to sync the logfile or not</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/jellog/logger.rb', line 44</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_logfilename identifier id'>logfilename</span><span class='comma token'>,</span> <span class='rubyid_reset identifier id'>reset</span><span class='comma token'>,</span> <span class='rubyid_max_logs identifier id'>max_logs</span><span class='comma token'>,</span> <span class='rubyid_max_size identifier id'>max_size</span><span class='comma token'>,</span> <span class='rubyid_coloured identifier id'>coloured</span><span class='comma token'>,</span> <span class='rubyid_format identifier id'>format</span><span class='comma token'>,</span> <span class='rubyid_sync identifier id'>sync</span><span class='rparen token'>)</span>
+  <span class='rubyid_file_mode identifier id'>file_mode</span> <span class='assign token'>=</span> <span class='rubyid_reset identifier id'>reset</span> <span class='integer val'>? </span><span class='string val'>&quot;w&quot;</span> <span class='colon op'>:</span> <span class='string val'>&quot;a&quot;</span>
+  <span class='rubyid_@logfile ivar id'>@logfile</span> <span class='assign token'>=</span> <span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_logfilename identifier id'>logfilename</span><span class='comma token'>,</span> <span class='rubyid_file_mode identifier id'>file_mode</span><span class='rparen token'>)</span>
+  <span class='rubyid_@logfile ivar id'>@logfile</span><span class='dot token'>.</span><span class='rubyid_sync identifier id'>sync</span> <span class='assign token'>=</span> <span class='rubyid_sync identifier id'>sync</span>
+  <span class='rubyid_@logger ivar id'>@logger</span> <span class='assign token'>=</span> <span class='colon3 op'>::</span><span class='rubyid_Logger constant id'>Logger</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_@logfile ivar id'>@logfile</span><span class='comma token'>,</span> <span class='rubyid_max_logs identifier id'>max_logs</span><span class='comma token'>,</span> <span class='rubyid_max_size identifier id'>max_size</span><span class='rparen token'>)</span>
+  <span class='rubyid_@format_str ivar id'>@format_str</span> <span class='assign token'>=</span> <span class='rubyid_format identifier id'>format</span> <span class='orop op'>||</span> <span class='string val'>&quot;%Y-%m-%d %H:%M:%S&quot;</span>
+  <span class='rubyid_@coloured ivar id'>@coloured</span> <span class='assign token'>=</span> <span class='rubyid_coloured identifier id'>coloured</span>
+  <span class='rubyid_@colours ivar id'>@colours</span> <span class='assign token'>=</span>  <span class='rubyid_Levels constant id'>Levels</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+<div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice this">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+  </p>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="method_missing-instance_method">
+  
+    - (<tt>Object</tt>) <strong>method_missing</strong>(meth, msg) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>handle logging methods as required</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NoMethodError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69
+70
+71
+72
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/jellog/logger.rb', line 67</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_method_missing identifier id'>method_missing</span><span class='lparen token'>(</span><span class='rubyid_meth identifier id'>meth</span><span class='comma token'>,</span> <span class='rubyid_msg identifier id'>msg</span><span class='rparen token'>)</span>
+  <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_NoMethodError constant id'>NoMethodError</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_@colours ivar id'>@colours</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='rubyid_meth identifier id'>meth</span><span class='rparen token'>)</span>
+  <span class='comment val'>#meth = :info if meth == :system</span>
+  <span class='rubyid_tstamp identifier id'>tstamp</span> <span class='assign token'>=</span> <span class='rubyid_Time constant id'>Time</span><span class='dot token'>.</span><span class='rubyid_now identifier id'>now</span><span class='dot token'>.</span><span class='rubyid_strftime identifier id'>strftime</span><span class='lparen token'>(</span><span class='rubyid_@format_str ivar id'>@format_str</span><span class='rparen token'>)</span>
+  <span class='rubyid_prefix identifier id'>prefix</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;[#{tstamp}] #{meth.to_s.upcase}&quot;</span>
+  <span class='rubyid_prefix identifier id'>prefix</span> <span class='assign token'>=</span> <span class='rubyid_prefix identifier id'>prefix</span><span class='dot token'>.</span><span class='rubyid_send identifier id'>send</span><span class='lparen token'>(</span><span class='rubyid_@colours ivar id'>@colours</span><span class='lbrack token'>[</span><span class='rubyid_meth identifier id'>meth</span><span class='rbrack token'>]</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_@coloured ivar id'>@coloured</span>
+  <span class='rubyid_prefix identifier id'>prefix</span> <span class='assign token'>=</span> <span class='rubyid_prefix identifier id'>prefix</span><span class='dot token'>.</span><span class='rubyid_send identifier id'>send</span><span class='lparen token'>(</span><span class='symbol val'>:bold</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_@coloured ivar id'>@coloured</span> <span class='andop op'>&amp;&amp;</span> <span class='lparen token'>(</span><span class='rubyid_meth identifier id'>meth</span> <span class='eq op'>==</span> <span class='symbol val'>:fatal</span> <span class='orop op'>||</span> <span class='rubyid_meth identifier id'>meth</span> <span class='eq op'>==</span> <span class='symbol val'>:mark</span><span class='rparen token'>)</span>
+  <span class='rubyid_@logger ivar id'>@logger</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_prefix identifier id'>prefix</span> <span class='plus op'>+</span> <span class='dstring node'>&quot; - #{msg}\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="close-instance_method">
+  
+    - (<tt>Object</tt>) <strong>close</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>close the log file</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/jellog/logger.rb', line 62</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_close identifier id'>close</span>
+  <span class='rubyid_@logfile ivar id'>@logfile</span><span class='dot token'>.</span><span class='rubyid_close identifier id'>close</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="colours=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>colours=</strong>(colour_hash) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>change the colour lookup. See <span class='object_link'><a href="Logger.html" title="Jellog::Logger (class)">Logger</a></span> for details</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>colour_hash</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>maps logging methods to colours</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/jellog/logger.rb', line 57</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_colours= identifier id'>colours=</span><span class='lparen token'>(</span><span class='rubyid_colour_hash identifier id'>colour_hash</span><span class='rparen token'>)</span>
+  <span class='rubyid_@colours ivar id'>@colours</span> <span class='assign token'>=</span> <span class='rubyid_Levels constant id'>Levels</span><span class='dot token'>.</span><span class='rubyid_merge identifier id'>merge</span><span class='lparen token'>(</span><span class='rubyid_colour_hash identifier id'>colour_hash</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Fri Nov 16 16:51:16 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
