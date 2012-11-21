@@ -29,5 +29,6 @@ log
 *.gem
 
 .yardoc/
+doc
 
 .jevoom.rb
