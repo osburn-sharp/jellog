@@ -12,7 +12,8 @@ adds a few features that may be useful:
 * provides a 'puts' method to enable apps to output to either console or log (e.g foreground
   vs background);
 * returns logged messages, e.g. to cascade into exceptions
-* simple log level control.
+* simple log level control;
+* proxy class that responds to same methods and outputs to stderr
 
 
 **GitHub:** [https://github.com/osburn-sharp/jellog](https://github.com/osburn-sharp/jellog)
@@ -94,6 +95,22 @@ to the logger only. Check out the Jeckyl class method #intersection to get these
     nonlog_opts = full_opts.complement(log_opts)
     
 More details of Jeckyl can be found on [GitHub](https://github.com/osburn-sharp/jeckyl).
+
+### Using the Proxy Logger
+
+There may be times when you want to write code that can log to a full logger or just to the 
+display, depending on who calls it. Logging everything with puts may work but is very limited.
+The proxy logger allows you to substitute a logger that responds to all the same methods 
+but outputs messages to the display - with colours but without timestamps. 
+
+For example, a module may be used by a service, in which case it would log messages to the
+service's log using the service's logger. Or it may be used by a CLI, in which case you want the
+same messages to go straight to the display.
+
+    proxy = Jellog::ProxyLogger.new(appname, options)
+    proxy.system "A system message"
+    
+Proxy responds to all the same methods. It does not log anything to syslog.
     
 ## Code Walkthrough
 

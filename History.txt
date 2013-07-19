@@ -1,5 +1,9 @@
 == History
 
+[jellog-1.0.15 19-Jul-2013]
+
+  Add a proxy logger to enable logging to either a full logger or to a display
+
 [jellog-1.0.14 17-Nov-2012]
 
   Revert to /var/log/jerbil
