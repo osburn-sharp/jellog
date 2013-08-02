@@ -1,13 +1,13 @@
 # Created by Jevoom
 #
-# 19-Jul-2013
-#   Add a proxy logger to enable logging to either a full logger or to a display
+# 02-Aug-2013
+#   Add :suppress option to block messages other than :warn, :error, :fatal and :exception
 
 module Jellog
-  # version set to 1.0.15
-  Version = '1.0.15'
-  # date set to 19-Jul-2013
-  Version_Date = '19-Jul-2013'
-  #ident string set to: jellog-1.0.15 19-Jul-2013
-  Ident = 'jellog-1.0.15 19-Jul-2013'
+  # version set to 1.0.16
+  Version = '1.0.16'
+  # date set to 02-Aug-2013
+  Version_Date = '02-Aug-2013'
+  #ident string set to: jellog-1.0.16 02-Aug-2013
+  Ident = 'jellog-1.0.16 02-Aug-2013'
 end

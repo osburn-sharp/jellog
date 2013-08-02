@@ -110,7 +110,9 @@ same messages to go straight to the display.
     proxy = Jellog::ProxyLogger.new(appname, options)
     proxy.system "A system message"
     
-Proxy responds to all the same methods. It does not log anything to syslog.
+Proxy responds to all the same methods. It does not log anything to syslog. By adding a
+:suppress flag to the options, you can stop Proxy from producing anything other than
+error messages.
     
 ## Code Walkthrough
 

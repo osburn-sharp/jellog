@@ -1,5 +1,9 @@
 == History
 
+[jellog-1.0.16 02-Aug-2013]
+
+  Add :suppress option to block messages other than :warn, :error, :fatal and :exception
+
 [jellog-1.0.15 19-Jul-2013]
 
   Add a proxy logger to enable logging to either a full logger or to a display

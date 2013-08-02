@@ -33,6 +33,7 @@ module Jellog
     # @params [Hash] log_opts hash of options
     # @option [Symbol] :log_level to log to (:system, :verbose, :debug)
     # @option [Boolean] :log_coloured
+    # @option [Boolean] :suppress messages unless warn, error or fatal
     # @return [Jellog::ProxyLogger] self
     def initialize(appname, log_opts={})
       
@@ -42,7 +43,7 @@ module Jellog
       @log_level = log_opts.delete(:log_level) || :system
       @mark = log_opts[:log_mark] || ' *** MARK ***'
       
-      @logger = Jellog::Plogger.new(appname, log_opts[:log_coloured])
+      @logger = Jellog::Plogger.new(appname, log_opts[:log_coloured], log_opts[:suppress])
       
     end
     
@@ -56,12 +57,27 @@ module Jellog
     # @params [String] appname to display in the log
     # @params [Boolean] coloured or not
     # @return [Jellog::Plogger] self
-    def initialize(appname, coloured)
+    def initialize(appname, coloured, suppress)
       # don't need a time stamp, so use the format string to prefix the appname
       @format_str = appname
       @coloured = coloured
+      @suppress = suppress
       @colours = Levels
       @logger = $stderr
+    end
+    
+    # when suppress is enabled, ignore messages that are suppressed
+    def method_missing(meth, msg)
+      
+      return if @suppress && suppressed_msgs.include?(meth)
+      
+      super(meth, msg)
+      
+    end
+    
+    # defines suppressed messages
+    def suppressed_msgs
+      [:system, :info, :verbose, :debug]
     end
     
     # ensure a user does not accidentally close stderr

@@ -38,4 +38,23 @@ rescue Exception => e
   logger.exception(e)
 end
 
-logger.puts "A plain old big of text to finish"
+logger.puts "A plain old bit of text to finish"
+logger.mark
+
+logger = Jellog::ProxyLogger.new('tester', :log_coloured=>true, :log_level=>:debug, :suppress=>true)
+
+logger.system "System Message"
+logger.info "Information Message"
+logger.verbose "Verbose Message"
+logger.debug "Debug Message"
+logger.warn "Warning Message"
+logger.error "Error Message"
+logger.fatal "Fatal Message"
+
+begin
+  raise ArgumentError, "Wrong argument"
+rescue Exception => e
+  logger.exception(e)
+end
+
+logger.puts "A plain old bit of text to finish"
