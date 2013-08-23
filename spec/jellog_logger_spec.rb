@@ -15,6 +15,8 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 # most of these tests require you to check the log file
 
+puts RUBY_VERSION
+
 describe 'Logger' do
   
   before(:each) do

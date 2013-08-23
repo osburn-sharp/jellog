@@ -1,5 +1,9 @@
 == History
 
+[jellog-1.0.17 02-Aug-2013]
+
+  Ensuring 1.9 compliance (just changed the shebang on the pointless bin file)
+
 [jellog-1.0.16 02-Aug-2013]
 
   Add :suppress option to block messages other than :warn, :error, :fatal and :exception
